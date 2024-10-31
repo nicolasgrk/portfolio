@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Nav from "./Nav";
-import Mobilenav from "./Mobilenav"
+import Mobilenav from "./MobileNav"
 
 const Header = () => {
   return <header className="py-8 xl:py-12 text-white">
