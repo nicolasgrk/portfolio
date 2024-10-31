@@ -64,8 +64,7 @@ const Contact = () => {
               method="POST"
               data-netlify="true"
             >
-              {/* Champ caché pour identifier le formulaire pour Netlify */}
-              <input type="hidden" name="form-name" value="contact" />
+
 
               <h3 className="text-4xl text-accent">Transformons Vos Idées en Réalité !</h3>
               <p className="text-white/60">Votre projet mérite une attention sur-mesure. Contactez-moi dès maintenant pour le concrétiser ensemble !</p>
