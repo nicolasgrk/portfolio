@@ -42,20 +42,6 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-
-    // Soumettre le formulaire via Netlify
-    fetch("/", {
-      method: "POST",
-      body: data,
-    })
-      .then(() => alert("Votre message a été envoyé avec succès"))
-      .catch((error) => alert("Erreur lors de l'envoi du message"));
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -74,18 +60,20 @@ const Contact = () => {
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
-              onSubmit={handleSubmit}
-              name="contact" // Nom du formulaire pour Netlify
+              name="contact"
               method="POST"
               data-netlify="true"
             >
-              {/* Champ caché pour identifier le formulaire */}
+              {/* Champ caché pour identifier le formulaire pour Netlify */}
               <input type="hidden" name="form-name" value="contact" />
 
               <h3 className="text-4xl text-accent">Transformons Vos Idées en Réalité !</h3>
               <p className="text-white/60">Votre projet mérite une attention sur-mesure. Contactez-moi dès maintenant pour le concrétiser ensemble !</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input type="hidden" name="form-name" value="contact" />
+
+
                 <Input
                   name="firstname"
                   type="text"
